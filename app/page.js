@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import styles from "./page.module.css";
 import Picks from "./Components/Picks/Picks";
+import Experience from "./Components/Experience/Experience";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Navbar/>
         <Hero/>
         <Picks />
+        <Experience />
       </main>
       <footer className={styles.footer}>
         footer

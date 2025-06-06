@@ -13,7 +13,6 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/free-mode';
 
 const Picks = () => {
-    console.log("data >>", defaultData)
     const data = defaultData?.picksData;
     const dataItem = defaultData?.picksDataItem;
     const PicksStyle = {
@@ -30,16 +29,18 @@ const Picks = () => {
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'contain',
             position: 'absolute',
-            height: {xs: '100%', sm: '1.75rem', md: '3.134rem'},
+            height: {xs: '16px', sm: '1.75rem', md: '3.134rem'},
             left: {xs: '-5px', md: '-1.875rem'},
-            top: {xs: '-29px', sm: '-46px', md: '-58px', lg: '-90px'},
-            width: {xs: '100%', sm: '300px', md: '533.7px'},
+            top: {xs: '-40px', sm: '-46px', md: '-58px', lg: '-90px'},
+            width: {xs: '171.43px', sm: '300px', md: '533.7px'},
             zIndex: 1,
             '&.bottom':{
                 left: 'unset',
                 top: 'unset',
-                bottom: {lg: '-80px'},
-                right: {lg: '-32px'},
+                bottom: {xs:'-40px', sm: '-40px',md: '-45px', lg: '-80px'},
+                right: {xs: '0', lg: '-32px'},
+                height: {sm: '28px', md: '50.14px'},
+                width: {sm: '300px', md: '533.7px'}
             }
         },
         '.mp-rightSide':{
@@ -72,10 +73,11 @@ const Picks = () => {
         },
     }
     return (
-        <Box l
+        <Box
             component={'section'}
             sx={PicksStyle}
             className='flex'
+            id='picks'
         >
             <Container maxWidth='lg' sx={{position: 'relative'}}>
                 <Box className='mp-rightSide' />
@@ -114,7 +116,7 @@ const Picks = () => {
                     >
                         <>
                             {
-                                dataItem.map((data, key) => {
+                                dataItem?.map((data, key) => {
                                     return(
                                         <SwiperSlide 
                                             key={key}
