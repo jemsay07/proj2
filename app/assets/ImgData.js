@@ -5,17 +5,27 @@ import pinnacle from './images/sections/picks/tiles/mp-pinnacle.png';
 import tfgaming from './images/sections/picks/tiles/mp-tfgaming.png';
 import bgPicks from './images/sections/picks/mp-picks.png';
 
-const picksData = [
-    {
-        bg: bgPicks,
-        brushImgDesktop: brushImgRedDesktop,
-        brushImgMobile: brushImgRedMobile,
-        saba: saba,
-        pinnacle: pinnacle,
-        tfgaming: tfgaming, 
-        title: 'Pacquiao Picks',
-        btnTxt: 'dolor'
-    }
-];
+const picksData = {
+    bg: bgPicks,
+    brushImgDesktop: brushImgRedDesktop,
+    brushImgMobile: brushImgRedMobile,
+    title: 'Pacquiao Picks',
+    btnTxt: 'dolor'
+};
 
-export default picksData;
+const picksDataItem = [
+    {
+        title: 'saba',
+        img: saba,
+    },
+    {
+        title: 'pinnacle',
+        img: pinnacle,
+    },
+    {
+        title: 'tfgaming',
+        img: tfgaming, 
+    },
+]
+
+export default { picksData, picksDataItem };

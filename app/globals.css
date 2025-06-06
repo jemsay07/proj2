@@ -52,6 +52,9 @@ a {
 
 .h-inherit{height: inherit}
 
+.relative{position:relative}
+
+
 .mp-txt{
     display: block;
     font-style: normal;
