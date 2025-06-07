@@ -8,7 +8,6 @@ const Buttons = ({
   text,
   width,
 }) => {
-  console.log("text>>", text)
   const ButtonStyle = {
     boxSizing: 'border-box',
     backgroundColor: '#F8FD00',

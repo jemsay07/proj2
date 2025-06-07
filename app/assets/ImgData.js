@@ -1,6 +1,6 @@
 import brushImgRedDesktop from './images/brush/mp-red-brush-desktop.svg';
 import brushImgRedMobile from './images/brush/mp-red-brush-mobile.svg';
-import brushImgBlue from './images/brush/mp-blue-brush.svg';
+import brushImgBlueSrc from './images/brush/mp-blue-brush.svg';
 import saba from './images/sections/picks/tiles/mp-saba-wc-en.png';
 import pinnacle from './images/sections/picks/tiles/mp-pinnacle.png';
 import tfgaming from './images/sections/picks/tiles/mp-tfgaming.png';
@@ -41,7 +41,7 @@ const expData = {
     quoteText: 'Aliquam erat volutpat. Quisque dignissim ut magna non dapibus. Quisque tempus nunc quis rutrum aliquam. Donec pretium lacus sit amet malesuada eleifend. ',
     quoteImgSrc: quoteImgTop,
     expBgSrc: expBgArena,
-    brushImgBlue:brushImgBlue
+    brushImgBlue: brushImgBlueSrc
 }
 
 export default { picksData, picksDataItem, expData };
