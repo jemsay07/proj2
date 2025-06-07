@@ -17,7 +17,7 @@ const Navbar = () => {
   };
   return (
     <Box>
-      <AppBar position='sticky' elevation={0} sx={{backgroundColor: '#222939',  paddingY: '5px'}}>
+      <AppBar position='fixed' elevation={0} sx={{backgroundColor: '#222939',  paddingY: '5px'}}>
         <Container maxWidth='lg'>
           <Box className='flex align-center justify-between'sx={{height: '60px',}}>
             <Box component='h1' sx={{ fontSize: '24px', fontWeight: 'bold', textTransform: 'uppercase' }}>

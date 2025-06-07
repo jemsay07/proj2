@@ -1,12 +1,24 @@
+import bannerDesk from './images/banner/mp-banner-202307-2-11-24.jpg';
+import bannerMobi from './images/banner/mp-banner-mobi-202307-2-11-24.jpg';
 import brushImgRedDesktop from './images/brush/mp-red-brush-desktop.svg';
 import brushImgRedMobile from './images/brush/mp-red-brush-mobile.svg';
 import brushImgBlueSrc from './images/brush/mp-blue-brush.svg';
-import saba from './images/sections/picks/tiles/mp-saba-wc-en.png';
+import bti from './images/sections/picks/tiles/mp-bti.png';
+import apSports from './images/sections/picks/tiles/mp_APSports_EN.png';
 import pinnacle from './images/sections/picks/tiles/mp-pinnacle.png';
 import tfgaming from './images/sections/picks/tiles/mp-tfgaming.png';
 import bgPicks from './images/sections/picks/mp-picks.png';
 import quoteImgTop from './images/sections/exp/quote-top.png';
 import expBgArena from './images/sections/exp/arena.png';
+
+const heroData = {
+    logo: 'Consectetur',
+    text1: 'Lorem ipsum dolor sit',
+    text2: 'Aenean eu lacinia diam',
+    btnText1: 'consequat',
+    bannerDesk: bannerDesk,
+    bannerMobi: bannerMobi,
+}
 
 const picksData = {
     bg: bgPicks,
@@ -18,8 +30,8 @@ const picksData = {
 
 const picksDataItem = [
     {
-        title: 'saba',
-        img: saba,
+        title: 'bti',
+        img: bti,
     },
     {
         title: 'pinnacle',
@@ -28,6 +40,10 @@ const picksDataItem = [
     {
         title: 'tfgaming',
         img: tfgaming, 
+    },
+    {
+        title: 'apSports',
+        img: apSports, 
     },
 ];
 
@@ -44,4 +60,6 @@ const expData = {
     brushImgBlue: brushImgBlueSrc
 }
 
-export default { picksData, picksDataItem, expData };
+const ytUrl = ['D0UnqGm_miA','9xwazD5SyVg','u31qwQUeGuM','LXb3EKWsInQ','9Nm9tU93BZo'];
+
+export default { heroData, picksData, picksDataItem, expData, ytUrl };

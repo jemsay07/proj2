@@ -1,8 +1,10 @@
 import React from 'react'
-import { Box, Container, Typography } from '@mui/material'
-import defaultData from '../../assets/ImgData.js';
+import { Box, Container } from '@mui/material'
 import Buttons from '../Buttons/Buttons.jsx';
 import PicksCardItem from './PicksCardItem.jsx';
+import HeadingTitle from '../Heading/HeadingTitle.jsx';
+
+import PropTypes from 'prop-types' 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,11 +13,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/free-mode';
-import HeadingTitle from '../Heading/HeadingTitle.jsx';
 
-const Picks = () => {
-    const data = defaultData?.picksData;
-    const dataItem = defaultData?.picksDataItem;
+const Picks = ({data, dataItem}) => {
     const PicksStyle = {
         backgroundColor: '#CD242B',
         boxSizing: 'border-box',
@@ -130,6 +129,11 @@ const Picks = () => {
             </Container>
         </Box>
     )
+}
+
+Picks.propTypes = {
+    data: PropTypes.any,
+    dataItem: PropTypes.any,
 }
 
 export default Picks

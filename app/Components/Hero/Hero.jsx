@@ -1,19 +1,8 @@
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react';
+import PropTypes from 'prop-types' 
 
-import bannerDesk from '../../assets/images/banner/mp-banner-202307-2-11-24.jpg';
-import bannerMobi from '../../assets/images/banner/mp-banner-mobi-202307-2-11-24.jpg';
-
-const data =[
-  {
-    logo: 'Consectetur',
-    text1: 'Lorem ipsum dolor sit',
-    text2: 'Aenean eu lacinia diam',
-    btnText1: 'consequat'
-  }
-]
-
-const Hero = () => {
+const Hero = ({data}) => {
 
   const TileStyle = {
     '&.mp-carousel-item':{
@@ -57,25 +46,30 @@ const Hero = () => {
     }
   }
   return (
-    <Box component={'section'} sx={{backgroundColor: '#010101', height: {xs: '53.5vw', md: '33.38vw'}, maxHeight:{md: '487px'}}}>
+    <Box component={'section'} sx={{
+        backgroundColor: '#010101', 
+        height: {xs: '61.5vw', sm: '53.5vw', md: '37.38vw', lg: "42.38vw"}, 
+        paddingTop: '70px',
+        maxHeight:{md: '487px', lg: '520px'}
+      }}>
       <Container maxWidth='lg'  sx={(theme) => ({height: '100%', [theme.breakpoints.down('md')]:{paddingX: 0}})}>
         <Box className='tile mp-carousel-item h-inherit' sx={TileStyle}>
           <Box className='mp-carousel-item h-inherit'>
             <Box className='from-tablet-up h-inherit'>
-              <img src={`${bannerDesk.src}`} className='mp-img' alt='' />
+              <img src={`${data?.bannerDesk.src}`} className='mp-img' alt='' />
             </Box>
             <Box className='up-to-tablet'>
-              <img src={`${bannerMobi.src}`} className='mp-img' alt='' />
+              <img src={`${data?.bannerMobi.src}`} className='mp-img' alt='' />
             </Box>
             <Box className='mp-content paddingLeftBottom' sx={MPContentStyle}>
               <Typography component={'span'} className='mp-txt'>
-                {data[0].logo}
+                {data.logo}
               </Typography>
               <Typography component={'span'} className='mp-txt'>
-                {data[0].text1}
+                {data.text1}
               </Typography>
               <Typography component={'span'} className='mp-txt'>
-                {data[0].text2}
+                {data.text2}
               </Typography>
             </Box>
           </Box>
@@ -83,6 +77,10 @@ const Hero = () => {
       </Container>
     </Box>
   )
+}
+
+Hero.propTypes = {
+  data: PropTypes.any
 }
 
 export default Hero

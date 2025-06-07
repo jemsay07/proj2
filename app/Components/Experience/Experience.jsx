@@ -1,10 +1,9 @@
 import { Box, Container } from '@mui/material'
 import React from 'react'
 import HeadingTitle from '../Heading/HeadingTitle'
-import data from '../../assets/ImgData'
+import PropTypes from 'prop-types'
 
-const Experience = () => {
-    const dataExp = data?.expData;
+const Experience = ({dataExp}) => {
     const ExperienceStyle = (theme) => ({
         backgroundColor: '#0038A8',
         paddingY: {xs: '24px', sm:'32px', md: '48px', lg: '64px'},
@@ -91,10 +90,12 @@ const Experience = () => {
             position: 'absolute',
             height: {xs: '16px', sm: '1.75rem', md: '3.134rem'},
             right: {xs: '0', lg: '-32px'},
-            bottom: {xs:'-32px', sm: '-45px',md: '-65px', lg: '-80px'},
+            bottom: {xs:'-32px', sm: '-45px',md: '-75px', lg: '-90px'},
             width: {xs: '171.43px', sm: '300px', md: '533.7px'},
             zIndex: 1,
             '&.bottom':{
+                right: {md: 'unset'},
+                left: {md: 0},
                 height: {sm: '28px', md: '50.14px'},
                 width: {sm: '300px', md: '533.7px'}
             }
@@ -136,6 +137,10 @@ const Experience = () => {
             </Container>
         </Box>
     )
+}
+
+Experience.propTypes = {
+    dataExp: PropTypes.any
 }
 
 export default Experience
