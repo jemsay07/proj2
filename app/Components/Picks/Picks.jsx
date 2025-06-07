@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/free-mode';
+import HeadingTitle from '../Heading/HeadingTitle.jsx';
 
 const Picks = () => {
     const data = defaultData?.picksData;
@@ -54,13 +55,6 @@ const Picks = () => {
             width: {xs: '207.77px', sm: '370px',md: '451.01px', lg: '625px'},
             zIndex: {xs: '2'}
         },
-        'h4':{
-            color: '#F8FD00',
-            fontSize: {xs: '1.25rem', md: '1.5rem'},
-            fontWeight: 600,
-            lineHeight: {xs:'1.5rem', md: '2rem'},
-            textTransform: 'uppercase'
-        },
         '.flex-col-row':{flexDirection: { xs: 'column', sm: 'row' }},
         '.swiper-holder':{
             margin: {xs: '-16px', lg: '-24px'},
@@ -83,10 +77,10 @@ const Picks = () => {
                 <Box className='mp-rightSide' />
                 <Box className='mp-brush'/>
                 <Box className='flex align-end justify-between flex-col-row relative' sx={{alignItems:{xs: 'flex-start'}, gap: '8px', paddingBottom: {xs: '1rem', md: '2rem'}, zIndex: {xs: '2'}}} >
-                    <Typography component={'h4'}>
-                        {data.title}
-                    </Typography>
-                    <Buttons text='test'/>
+                    <HeadingTitle
+                        text={data.title}
+                    />
+                    <Buttons text='pharetra'/>
                 </Box>
                 <Box className='swiper-holder'>
                     <Swiper

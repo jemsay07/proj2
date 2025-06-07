@@ -39,15 +39,15 @@ const Buttons = ({
 Buttons.propTypes = {
   fontSize: PropTypes?.array,
   height: PropTypes?.array,
-  width: PropTypes?.array,
   text: PropTypes?.string,
+  width: PropTypes?.array,
 }
 
 Buttons.defaultProps = {
-  fontSize: {xs: '10px', md: '1rem'},
-  height: {xs: 'inherit', sm: 'inherit', md: 'inherit', lg: 'inherit'},
+  fontSize: { xs: '10px', md: '1rem' },
+  height: { xs: 'inherit', sm: 'inherit', md: 'inherit', lg: 'inherit' },
   text: 'gravida',
-  width: {xs: 'inherit', sm: 'inherit', md: 'inherit', lg: 'inherit'},
+  width: { xs: 'inherit', sm: 'inherit', md: 'inherit', lg: 'inherit' },
 }
 
 export default Buttons
